@@ -34,14 +34,31 @@ const changePosition = function () {
 
 position.addEventListener('change', changePosition);
 
-const size = document.querySelector('.size');
+const width = document.querySelector('.width');
 
-const changeSize = function () {
-  console.log('from size')
-  // camera.size.z = -((size.value) - (size.max))
+const changeWidth = function () {
+  cube.scale.x = width.value
 }
 
-size.addEventListener('change', changeSize);
+width.addEventListener('change', changeWidth);
+
+
+const height = document.querySelector('.height');
+
+const changeHeight = function () {
+  cube.scale.y = height.value
+}
+
+height.addEventListener('change', changeHeight);
+
+
+const depth = document.querySelector('.depth');
+
+const changeDepth = function () {
+  cube.scale.z = depth.value
+}
+
+depth.addEventListener('change', changeDepth);
 
 
 // const rotationSpeedinput = document.querySelector('.rotation-speed');
