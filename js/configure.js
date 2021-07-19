@@ -22,3 +22,16 @@ const animate = function () {
 };
 
 animate();
+
+
+// CUSTOM JS for configuration
+
+const input = document.querySelector('.size');
+console.log(input);
+
+const changeSize = function () {
+  console.log("triggered in changeSize()");
+  // camera.position.z = inputs
+}
+
+input.addEventListener('change', changeSize);
