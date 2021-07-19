@@ -1,0 +1,22 @@
+{
+  "name": "3d-configurator-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "three.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tim0Cc/3D-configurator-FrontEnd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tim0Cc/3D-configurator-FrontEnd/issues"
+  },
+  "homepage": "https://github.com/Tim0Cc/3D-configurator-FrontEnd#readme",
+  "dependencies": {
+    "three": "^0.130.1"
+  }
+}
