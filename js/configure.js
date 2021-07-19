@@ -26,12 +26,13 @@ animate();
 
 // CUSTOM JS for configuration
 
-const input = document.querySelector('.size');
+const input = document.querySelector('.position-z');
 console.log(input);
 
 const changeSize = function () {
   console.log("triggered in changeSize()");
-  // camera.position.z = inputs
+  console.log(input.value)
+  camera.position.z = -((input.value) - (input.max))
 }
 
 input.addEventListener('change', changeSize);
