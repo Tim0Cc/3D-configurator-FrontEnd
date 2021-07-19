@@ -34,10 +34,11 @@ const changePosition = function () {
 
 position.addEventListener('change', changePosition);
 
+
 const width = document.querySelector('.width');
 
 const changeWidth = function () {
-  cube.scale.x = width.value
+  cube.scale.x = width.value;
 }
 
 width.addEventListener('change', changeWidth);
@@ -46,7 +47,7 @@ width.addEventListener('change', changeWidth);
 const height = document.querySelector('.height');
 
 const changeHeight = function () {
-  cube.scale.y = height.value
+  cube.scale.y = height.value;
 }
 
 height.addEventListener('change', changeHeight);
@@ -55,19 +56,8 @@ height.addEventListener('change', changeHeight);
 const depth = document.querySelector('.depth');
 
 const changeDepth = function () {
-  cube.scale.z = depth.value
+  cube.scale.z = depth.value;
 }
 
 depth.addEventListener('change', changeDepth);
-
-
-// const rotationSpeedinput = document.querySelector('.rotation-speed');
-
-// const rotationSpeed = function () {
-//   let x = cube.rotation.x + rotationSpeedinput.value/100;
-//   let y = cube.rotation.y + rotationSpeedinput.value/100;
-//   animate(x, y) 
-// }
-
-// rotationSpeedinput.addEventListener('change', rotationSpeed);
 
