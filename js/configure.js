@@ -26,6 +26,7 @@ animate();
 
 // CUSTOM JS for configuration
 
+//position z of camera
 const position = document.querySelector('.position-z');
 
 const changePosition = function () {
@@ -34,7 +35,17 @@ const changePosition = function () {
 
 position.addEventListener('change', changePosition);
 
+// color
+const color = document.querySelector('.color');
 
+const changeColor = function () {
+  hexColor = '0x' + color.value.slice(1)
+  cube.material.color.setHex(hexColor);
+}
+
+color.addEventListener('change', changeColor);
+
+// width
 const width = document.querySelector('.width');
 
 const changeWidth = function () {
@@ -43,7 +54,7 @@ const changeWidth = function () {
 
 width.addEventListener('change', changeWidth);
 
-
+//height
 const height = document.querySelector('.height');
 
 const changeHeight = function () {
@@ -52,7 +63,7 @@ const changeHeight = function () {
 
 height.addEventListener('change', changeHeight);
 
-
+// depth
 const depth = document.querySelector('.depth');
 
 const changeDepth = function () {
