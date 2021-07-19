@@ -5,7 +5,7 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
-const geometry = new THREE.BoxGeometry();
+const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
@@ -26,13 +26,31 @@ animate();
 
 // CUSTOM JS for configuration
 
-const input = document.querySelector('.position-z');
-console.log(input);
+const position = document.querySelector('.position-z');
 
-const changeSize = function () {
-  console.log("triggered in changeSize()");
-  console.log(input.value)
-  camera.position.z = -((input.value) - (input.max))
+const changePosition = function () {
+  camera.position.z = -((position.value) - (position.max));
 }
 
-input.addEventListener('change', changeSize);
+position.addEventListener('change', changePosition);
+
+const size = document.querySelector('.size');
+
+const changeSize = function () {
+  console.log('from size')
+  // camera.size.z = -((size.value) - (size.max))
+}
+
+size.addEventListener('change', changeSize);
+
+
+// const rotationSpeedinput = document.querySelector('.rotation-speed');
+
+// const rotationSpeed = function () {
+//   let x = cube.rotation.x + rotationSpeedinput.value/100;
+//   let y = cube.rotation.y + rotationSpeedinput.value/100;
+//   animate(x, y) 
+// }
+
+// rotationSpeedinput.addEventListener('change', rotationSpeed);
+
