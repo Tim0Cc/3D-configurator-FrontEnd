@@ -11,19 +11,28 @@
     <div class="container" style="margin-left:100px;margin-right:100px;margin-top:20px;margin-bottom:20px;">
       <h2>Projects</h2>
       <% cuboids.forEach(cuboid => { %>
-        <div class="coboid">
-          <h3> <%= cuboid.name %>  </h3>
-          <div class="configuration">
-            <ul>
-              <li> Position: <%= cuboid.position %>  </li>
-              <li  style="background-color:<%= cuboid.color %>;"> Color: <%= cuboid.color %>  </li>
-              <li> Width: <%= cuboid.width %>  </li>
-              <li> Height: <%= cuboid.height %>  </li>
-              <li> Depth: <%= cuboid.depth %>  </li>
-            </ul>
+        <div class="flexbox" style="display:flex;justify-content:space-between">
+          <div class="flexitem">
+            <div class="coboid">
+              <h3> <%= cuboid.name %> </h3>
+              <div class="configuration">
+                <ul>
+                  <li> Position: <%= cuboid.position %>  </li>
+                  <li  style="background-color:<%= cuboid.color %>;"> Color: <%= cuboid.color %>  </li>
+                  <li> Width: <%= cuboid.width %>  </li>
+                  <li> Height: <%= cuboid.height %>  </li>
+                  <li> Depth: <%= cuboid.depth %>  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="flexitem">
+            <form action="/projects/<%= cuboid.id %>?_method=DELETE" method="post">
+              <button type="submit">Delete Project</button>
+            </form>
           </div>
         </div>
-      <% }) %> 
+      <% }) %>
     </div>
   </body>
 </html>

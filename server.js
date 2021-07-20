@@ -56,4 +56,16 @@ app.get('/projects', async (req, res) => {
   }
 })
 
+app.delete('/projects/:id', async (req, res) => {
+  let cuboid
+  try {
+    cuboid = await Cuboid.findById(req.params.id)
+    await cuboid.remove()
+    res.redirect('/projects')
+  } catch (error) {
+    console.error(error)
+    res.redirect('/')
+  }
+})
+
 app.listen(process.env.PORT || 3000)
