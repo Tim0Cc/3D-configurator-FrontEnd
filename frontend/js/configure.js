@@ -34,6 +34,7 @@ const changePosition = function () {
 }
 
 position.addEventListener('change', changePosition);
+position.addEventListener('DOMContentLoaded', changePosition());
 
 // color
 const color = document.querySelector('.color');
@@ -44,6 +45,7 @@ const changeColor = function () {
 }
 
 color.addEventListener('change', changeColor);
+color.addEventListener('DOMContentLoaded', changeColor());
 
 // width
 const width = document.querySelector('.width');
@@ -53,6 +55,7 @@ const changeWidth = function () {
 }
 
 width.addEventListener('change', changeWidth);
+width.addEventListener('DOMContentLoaded', changeWidth());
 
 //height
 const height = document.querySelector('.height');
@@ -62,6 +65,7 @@ const changeHeight = function () {
 }
 
 height.addEventListener('change', changeHeight);
+height.addEventListener('DOMContentLoaded', changeHeight());
 
 // depth
 const depth = document.querySelector('.depth');
@@ -71,4 +75,5 @@ const changeDepth = function () {
 }
 
 depth.addEventListener('change', changeDepth);
+depth.addEventListener('DOMContentLoaded', changeDepth());
 

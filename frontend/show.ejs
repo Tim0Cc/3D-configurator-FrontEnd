@@ -14,27 +14,30 @@
           <form action="/" method="POST" style="padding:20px">
             <div class="project">
               <label for="name">Project name</label>
-              <input type="text" name="name" id="name" class="name" required>
+              <input type="text" name="name" id="name" class="name" placeholder="<%= cuboid.name %>" value="<%= cuboid.name %>" required>
               <button type="submit">Save configuration</button>
             </div>
             <div class="controls" style="padding:10px">
               <div class="controls-1">
                 <label for="position">Zoom (z-position)</label>
-                <input type="range" name="position" id="position" class="position" min="1" max="10" value="5">
+                <input type="range" name="position" id="position" class="position" min="1" max="10" value="<%= cuboid.position %>">
                 <label for="color">Color</label>
-                <input type="color" name="color" id="color" class="color" value="#00ff00">
+                <input type="color" name="color" id="color" class="color" value="<%= cuboid.color %>">
               </div>
               <div class="controls-2">
                 <label for="width">width(x)</label>
-                <input type="range" name="width" id="width" class="width" min="1" max="10" value="1">
+                <input type="range" name="width" id="width" class="width" min="1" max="10" value="<%= cuboid.width %>">
                 <label for="height">height(y)</label>
-                <input type="range" name="height" id="height" class="height" min="1" max="10" value="1">
+                <input type="range" name="height" id="height" class="height" min="1" max="10" value="<%= cuboid.height %>">
                 <label for="depth">depth(z)</label>
-                <input type="range" name="depth" id="depth" class="depth" min="1" max="10" value="1">
+                <input type="range" name="depth" id="depth" class="depth" min="1" max="10" value="<%= cuboid.depth %>">
               </div>
             </div>
           </form>
         </div>
+				<div>
+					<button class="apply">Apply Configuration</button>
+				</div>
         <div class="links">
           <a href="/projects">Projects</a>
         </div>

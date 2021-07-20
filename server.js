@@ -56,6 +56,17 @@ app.get('/projects', async (req, res) => {
   }
 })
 
+app.get('/:id', async (req, res) => {
+  let cuboid
+  try {
+    cuboid = await Cuboid.findById(req.params.id)
+    res.render('./show', { cuboid })
+  } catch (error) {
+    console.error(error)
+    res.redirect('/')
+  }
+})
+
 app.delete('/projects/:id', async (req, res) => {
   let cuboid
   try {
