@@ -28,6 +28,7 @@ app.get('/', (req, res) => {
 
 app.post('/', async (req, res) => {
   const cuboid = new Cuboid({
+    name: req.body.name,
     position: req.body.position,
     color: req.body.color,
     width: req.body.width,

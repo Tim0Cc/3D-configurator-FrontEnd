@@ -8,8 +8,13 @@
 		</style>
 	</head>
 	<body>
-    <form action="/" method="POST">
-      <div class="controls">
+    <form action="/" method="POST" style="margin-left:100px;padding:20px">
+      <div class="project">
+        <label for="name">Project name</label>
+        <input type="text" name="name" id="name" class="name" required>
+        <button type="submit">Save configuration</button>
+      </div>
+      <div class="controls" style="padding:10px">
         <div class="controls-1">
           <label for="position">Zoom (z-position)</label>
           <input type="range" name="position" id="position" class="position" min="1" max="10" value="5">
@@ -25,7 +30,6 @@
           <input type="range" name="depth" id="depth" class="depth" min="1" max="10" value="1">
         </div>
       </div>
-      <button type="submit">Save configuration</button>
     </form>
 		<script src="./three/three.js"></script>
     <script type="module" src="./js/three_module.js">
