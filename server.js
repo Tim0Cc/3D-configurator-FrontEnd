@@ -20,8 +20,11 @@ app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: false }))
 
 app.get('/', (req, res) => {
-  // res.sendFile(path.join(__dirname + '/frontend/index.html'))
   res.render('./index')
+})
+
+app.post('/', (req, res) => {
+  
 })
 
 app.listen(process.env.PORT || 3000)
