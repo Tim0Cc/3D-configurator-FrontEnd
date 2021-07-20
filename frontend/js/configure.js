@@ -27,7 +27,7 @@ animate();
 // CUSTOM JS for configuration
 
 //position z of camera
-const position = document.querySelector('.position-z');
+const position = document.querySelector('.position');
 
 const changePosition = function () {
   camera.position.z = -((position.value) - (position.max));

@@ -6,18 +6,18 @@ const CuboidSchema = new mongoose.Schema({
     required: true
   },
   color: {
-    type: Number,
+    type: String,
     required: true
   },
   width: {
     type: Number,
     required: true
   },
-  length: {
+  height: {
     type: Number,
     required: true
   },
-  height: {
+  depth: {
     type: Number,
     required: true
   },

@@ -8,22 +8,25 @@
 		</style>
 	</head>
 	<body>
-    <div class="controls">
-      <div class="controls-1">
-        <label for="position-z">Zoom (z-position)</label>
-        <input type="range" id="position-z" class="position-z" min="1" max="10" value="5">
-        <label for="color">Color</label>
-        <input type="color" id="color" class="color" value="5">
+    <form action="/" method="POST">
+      <div class="controls">
+        <div class="controls-1">
+          <label for="position">Zoom (z-position)</label>
+          <input type="range" name="position" id="position" class="position" min="1" max="10" value="5">
+          <label for="color">Color</label>
+          <input type="color" name="color" id="color" class="color" value="5">
+        </div>
+        <div class="controls-2">
+          <label for="width">width(x)</label>
+          <input type="range" name="width" id="width" class="width" min="1" max="10" value="1">
+          <label for="height">height(y)</label>
+          <input type="range" name="height" id="height" class="height" min="1" max="10" value="1">
+          <label for="depth">depth(z)</label>
+          <input type="range" name="depth" id="depth" class="depth" min="1" max="10" value="1">
+        </div>
       </div>
-      <div class="controls-2">
-        <label for="width">width(x)</label>
-        <input type="range" id="width" class="width" min="1" max="10" value="1">
-        <label for="height">height(y)</label>
-        <input type="range" id="height" class="height" min="1" max="10" value="1">
-        <label for="depth">depth(z)</label>
-        <input type="range" id="depth" class="depth" min="1" max="10" value="1">
-      </div>
-    </div>
+      <button type="submit">Save configuration</button>
+    </form>
 		<script src="./three/three.js"></script>
     <script type="module" src="./js/three_module.js">
       import * as THREE from 'https://cdn.skypack.dev/three@0.130.1'; 
