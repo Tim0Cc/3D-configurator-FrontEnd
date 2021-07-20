@@ -11,7 +11,7 @@
     <div class="container" style="margin-left:100px;margin-right:100px;margin-top:20px;margin-bottom:20px;">
       <h2>Projects</h2>
       <% cuboids.forEach(cuboid => { %>
-        <div class="flexbox" style="display:flex;justify-content:space-between">
+        <div class="flexbox" style="display:flex;justify-content:space-between;border-top:4px solid black;">
           <div class="flexitem">
             <div class="coboid">
               <h3> <%= cuboid.name %> </h3>
@@ -26,10 +26,15 @@
               </div>
             </div>
           </div>
-          <div class="flexitem">
-            <form action="/projects/<%= cuboid.id %>?_method=DELETE" method="post">
-              <button type="submit">Delete Project</button>
-            </form>
+          <div class="flexitem" style="margin-top:20px;margin-bottom:20px;">
+            <div>
+              <form action="/projects/<%= cuboid.id %>?_method=DELETE" method="post">
+                <button type="submit">Delete Project</button>
+              </form>
+            </div>
+            <div>
+              <a href="/projects/<%= cuboid.id %>">Open Project</a>
+            </div>
           </div>
         </div>
       <% }) %>
