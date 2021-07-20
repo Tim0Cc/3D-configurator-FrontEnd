@@ -45,4 +45,15 @@ app.post('/', async (req, res) => {
   }
 })
 
+app.get('/projects', async (req, res) => {
+  try {
+    const cuboids = await Cuboid.find({})
+    console.log(cuboids)
+    res.render('./projects', { cuboids })
+  } catch (error) {
+    console.error(error)
+    res.redirect('/')
+  }
+})
+
 app.listen(process.env.PORT || 3000)
