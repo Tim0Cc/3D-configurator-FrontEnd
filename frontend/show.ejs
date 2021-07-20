@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>3D-Configurator</title>
+		<link rel="icon" href="https://freesvg.org/img/mono-kig-polygon.png">
 		<style>
 			body { margin: 0; }
 		</style>
@@ -11,11 +12,11 @@
     <div class="container" style="margin-left:100px;margin-right:100px;margin-top:20px;margin-bottom:20px;">
       <div class="flexbox" style="display:flex;justify-content:space-between">
         <div class="form">
-          <form action="/" method="POST" style="padding:20px">
+          <form action="/<%= cuboid.id %>?_method=PUT" method="POST" style="padding:20px">
             <div class="project">
               <label for="name">Project name</label>
               <input type="text" name="name" id="name" class="name" placeholder="<%= cuboid.name %>" value="<%= cuboid.name %>" required>
-              <button type="submit">Save configuration</button>
+              <button type="submit">Update configuration</button>
             </div>
             <div class="controls" style="padding:10px">
               <div class="controls-1">
@@ -35,9 +36,6 @@
             </div>
           </form>
         </div>
-				<div>
-					<button class="apply">Apply Configuration</button>
-				</div>
         <div class="links">
           <a href="/projects">Projects</a>
         </div>

@@ -3,13 +3,17 @@
 	<head>
 		<meta charset="utf-8">
 		<title>3D-Configurator</title>
+    <link rel="icon" href="https://freesvg.org/img/mono-kig-polygon.png">
 		<style>
 			body { margin: 0; }
 		</style>
 	</head>
 	<body>
     <div class="container" style="margin-left:100px;margin-right:100px;margin-top:20px;margin-bottom:20px;">
-      <h2>Projects</h2>
+      <div class="flexbox" style="display:flex;justify-content:space-between;">
+        <h2>Projects</h2>
+        <a href="/">New Project</a>
+      </div>
       <% cuboids.forEach(cuboid => { %>
         <div class="flexbox" style="display:flex;justify-content:space-between;border-top:4px solid black;">
           <div class="flexitem">
@@ -28,7 +32,7 @@
           </div>
           <div class="flexitem" style="margin-top:20px;margin-bottom:20px;">
             <div>
-              <form action="/projects/<%= cuboid.id %>?_method=DELETE" method="post">
+              <form action="/projects/<%= cuboid.id %>?_method=DELETE" method="POST">
                 <button type="submit">Delete Project</button>
               </form>
             </div>

@@ -35,8 +35,6 @@ app.post('/', async (req, res) => {
     height: req.body.height,
     depth: req.body.depth
   })
-  console.log(req.body)
-  console.log(cuboid)
   try {
     cuboid.save()
   } catch (error) {
@@ -48,7 +46,6 @@ app.post('/', async (req, res) => {
 app.get('/projects', async (req, res) => {
   try {
     const cuboids = await Cuboid.find({})
-    console.log(cuboids)
     res.render('./projects', { cuboids })
   } catch (error) {
     console.error(error)
@@ -60,6 +57,24 @@ app.get('/:id', async (req, res) => {
   let cuboid
   try {
     cuboid = await Cuboid.findById(req.params.id)
+    res.render('./show', { cuboid })
+  } catch (error) {
+    console.error(error)
+    res.redirect('/')
+  }
+})
+
+app.put('/:id', async (req, res) => {
+  let cuboid
+  try {
+    cuboid = await Cuboid.findById(req.params.id)
+    cuboid.name = req.body.name
+    cuboid.position = req.body.position
+    cuboid.color = req.body.color
+    cuboid.width = req.body.width
+    cuboid.height = req.body.height
+    cuboid.depth = req.body.depth
+    await cuboid.save()
     res.render('./show', { cuboid })
   } catch (error) {
     console.error(error)
